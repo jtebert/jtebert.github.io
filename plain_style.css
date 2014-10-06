@@ -1,0 +1,49 @@
+html, body {
+    background: #fff;
+    color: #000;
+}
+
+table {
+    font-size: 10pt;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+}
+
+.listing {
+    border-top: 2px solid #000;
+}
+
+.listing p {
+    margin-bottom: 0;
+}
+
+.listing h2 {
+    margin-top: 0;
+}
+
+.listing h3, .listing h4, .listing h5 {
+    margin-bottom: 0;
+}
+
+#general {
+    width: 100%;
+}
+
+#general td {
+    width: 33.3%;
+}
+
+#general td:nth-child(2) {
+    text-align: center;
+}
+
+#general td:nth-child(3) {
+    text-align: right;
+}
