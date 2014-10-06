@@ -9,7 +9,7 @@ html, body {
 }
 
 .fa {
-    margin-right: .5em;
+    margin: 0 .5em;
 }
 
 h1, h2, .box h3, #nav a {
@@ -50,7 +50,7 @@ a {
     color: #34495e;
 }
 
-a:hover {
+a:hover, a:visited:hover {
     color: #d35400;
 }
 
@@ -66,13 +66,6 @@ a:visited {
 /* boxes hover */
 .box ul a:hover, #nav a:hover, .box a:hover div {
 	background-color: #d35400;
-}
-
-.wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin-bottom: 0 -4em; /* the bottom margin is the negative value of the footer's height */
 }
 
 .main-container {
@@ -221,7 +214,7 @@ figcaption {
 }
 
 
-/**** Listing table (Resume) ****/
+/**** Listing table (cv) ****/
 
 
 .listing {
@@ -236,6 +229,10 @@ figcaption {
 
 .listing th {
     text-align: left;
+}
+.listing th a, .listing th a:hover, .listing th:visited {
+    color: inherit;
+    text-decoration: none;
 }
 
 .listing td {
@@ -276,12 +273,9 @@ figcaption {
 /*** Footer ***/
 
 
-#push, #footer {
+#footer {
     height: 4em;
     width: 100%;
-}
-
-#footer {
     padding-top: 1em;
     clear: both;
     position: relative;
