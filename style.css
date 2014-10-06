@@ -92,6 +92,10 @@ a:visited {
 	color: #fff;
 }
 
+.box a:hover, .box a:visited:hover {
+    color: inherit;
+}
+
 #nav {
 	padding: 0;
 	font-size: 1.2em;
