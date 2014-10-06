@@ -11,6 +11,12 @@ html, body {
 .fa {
     margin: 0 .5em;
 }
+.fa-left {
+    margin-left: 0;
+}
+.fa-right {
+    margin-right: 0;
+}
 
 h1, h2, .box h3, #nav a {
 	font-family: 'roboto_slabbold', serif;
