@@ -1,0 +1,12 @@
+---
+layout: page
+title: Research
+---
+
+<h1><i class="fa fa-bar-chart fa-fw fa-lg fa-left"></i>{{ page.title }}</h1>
+<p>The following are research projects I have been a part of.</p>
+
+{% for post in site.categories.research %}
+    <div class="divider1"></div><div class="divider2"></div>
+    {{ post.content }}
+{% endfor %}

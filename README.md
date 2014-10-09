@@ -1,4 +1,3 @@
-jtebert.github.io
-=================
+# Julia Ebert
 
-Personal website of Julia Ebert
+Personal website.
