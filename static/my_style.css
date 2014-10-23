@@ -232,9 +232,10 @@ a:visited {
 }
 
 figure {
-    margin: 0;
     float: left;
-    margin: 0 1em 1em 0;
+    margin: 0 2em 1em 0;
+    width: 16em;
+    max-height: 16em;
 }
 
 figure img {
