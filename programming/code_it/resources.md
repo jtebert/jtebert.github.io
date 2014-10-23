@@ -6,7 +6,7 @@ permalink: /programming/code_it/resources/
 
 # <i class="fa fa-laptop fa-fw fa-lg fa-left"></i>{{ page.title }}
 
-We just got started on everything you can do with programming. Don't stop now! There are lots of ways to keep learning to code and create awesome programs.There are a lot of useful resources out there online to help you keep coding, learn more programming, and answer your questions. Here are some useful sites
+We just got started on everything you can do with programming. Don't stop now! There are lots of ways to keep learning to code and create awesome programs.
 
 ---
 
