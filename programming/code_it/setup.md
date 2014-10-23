@@ -6,6 +6,8 @@ permalink: /programming/code_it/setup/
 
 # <i class="fa fa-desktop fa-fw fa-lg fa-left"></i>{{ page.title }}
 
+---
+
 ## Code Editor
 
 #### [CodeBunk](http://codebunk.com/)
@@ -24,6 +26,8 @@ If CodeBunk isn't working or don't want to or can't create an account, you can u
 - Run your code by clicking the arrow at the top right of the left panel.
 - Interact with your code in the console in the right panel.
 - **Save** your code. This gives it a URL you can come back to later. Every time you save, you get an updated URL. Write this down so you can come back to your code later.
+
+---
 
 ## Get Started
 

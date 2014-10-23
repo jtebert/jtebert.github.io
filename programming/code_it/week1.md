@@ -6,6 +6,8 @@ permalink: /programming/code_it/week1/
 
 # <i class="fa fa-code fa-fw fa-lg fa-left"></i>{{ page.title }}
 
+---
+
 ## Python Basics
 
 #### Variables:
@@ -58,6 +60,8 @@ goes on multiple lines.
 > - Reassign `meal` as `meal` + `meal` * `tax`
 > - Reassign `meal` again as `meal` + `meal` * `tip`
 
+---
+
 ## Strings
 
 #### String Functions:
@@ -90,6 +94,8 @@ value = raw_input("Your prompt:")
 > - Append the string with a greeting. If the name given was `"Lancelot"`, the greeting should say `"Hello, Lancelot"`. 
 > - Print the greeting to the console.
 
+---
+
 ## Functions
 
 {% highlight python %}
@@ -113,6 +119,8 @@ def example_function(argument1, argument2):
 > ### <i class="fa fa-code fa-lg fa-left"></i>Snazzy Tip Calculator
 >
 > Rewrite the tip calculator from above as a function with arguments for the meal, tip and tax.
+
+---
 
 ## Conditionals
 
@@ -151,13 +159,21 @@ not False       # = True (the opposite of the Boolean)
 > ### <i class="fa fa-code fa-lg fa-left"></i>Pig Latin
 >
 > Write a program to ask a user for text input and convert it into Pig Latin.
+
+> *oday ouyay ememberray igpay atinlay?*
 > 
 > #### Steps:
 > 
 > - Ask the user to enter a word, and save it to the variable `original`
-> - Write an `if` statement to check that `original` is not an empty string (check that the length is more than 0)
->
-> TO BE CONTINUED
+> - Write an `if` statement to check that `original` is not an empty string (check that the length is more than 0). If it isn't empty, `print` `original`
+> - Add an else case to `print` the string `"empty"` if the string was empty.
+> - Create a variable called `pig` and set it to the Pig Latin suffix `"ay"`.
+> - Inside your `if` statement, create a variable `first`, which contains the first letter of `original`. *Hint: Remember string indexing?*
+> - Still inside your `if`, create another `if` statement to check if `first` is a vowel (a, e, i, o, u).
+> - If the first letter is a vowel, create `new_word`, which is `original` with `pig` at the end. Then print `new_word`
+> - Add and `else` case to this `if` (for words the start with consonants). Here `new_word` is **all but the first letter of** `original`, `first`, and `pig` appended together. Print this `new_word`.
+
+---
 
 ## Lists
 
@@ -197,6 +213,8 @@ this_list.remove(2)    # MODIFIES the list to [0, 1, 3]
 >
 > `['platypus', 'narwhal', 'llama', 'pterodactyl', 'cat']` <i class="fa fa-arrow-right"></i> `['cat', 'llama', 'narwhal']`
 
+---
+
 ## For Loops
 
 #### Loop through List:
@@ -222,6 +240,8 @@ for s in my_string:
 > Write a function that takes a list of strings and removes every string with the letter "a" in it.
 >
 > *Hint: You will need to use both a for loop and an if statement.*
+
+---
 
 ## Bonus Functions
 
@@ -320,5 +340,7 @@ new_list = [1, 4, 100]
 > - Try placing more than one battleship on the board. *Hint: Make sure they don't end up on top of each other.*
 > - Make bigger battleships. *Hint: All the pieces need to be aligned vertically or horizontally, and none of them can go off the edge.*
 > - Make it a two-player game.
+
+---
 
 *Based on the Codecademy Python course*
