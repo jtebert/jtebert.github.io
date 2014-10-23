@@ -8,6 +8,13 @@ html, body {
 	color: #333;
 }
 
+hr {
+    height: 2px;
+    border: 0;
+    background: #e67e22;
+    margin: 1.5em 0;
+}
+
 .fa {
     margin: 0 .5em;
 }

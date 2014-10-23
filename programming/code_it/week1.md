@@ -207,11 +207,13 @@ this_list.remove(2)    # MODIFIES the list to [0, 1, 3]
 
 > ### <i class="fa fa-code fa-lg fa-left"></i>Lists Lists Lists Lists Lists 
 > 
-> Write a function that takes a list of strings, sorts it alphabetically, and returns the first half of the list. If there are an odd number of elements in the list, don't include the middle element.
+> Someone decided to let you run a zoo. Unfortunately, the zoo is in trouble and you only keep half the animals. You can't decide which ones to keep, though, so you decide to just keep the animals that come first in the alphabet.
+>
+> Write a function `keep_animals` that takes a list of animals (represented as strings), sorts it alphabetically, and returns the first half of the list. If there are an odd number of animals in the list, don't include the middle animal.
 >
 > **Example:**
 >
-> `['platypus', 'narwhal', 'llama', 'pterodactyl', 'cat']` <i class="fa fa-arrow-right"></i> `['cat', 'llama', 'narwhal']`
+> `['platypus', 'narwhal', 'llama', 'pterodactyl', 'cat']` &#8594; `['cat', 'llama', 'narwhal']`
 
 ---
 
