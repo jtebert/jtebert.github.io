@@ -96,4 +96,24 @@ value = raw_input("Your prompt:")
 
 ---
 
+## Functions
+
+{% highlight python %}
+def example_function(argument1, argument2):
+    '''
+    Describe your function here.
+    '''
+    some_value = 42
+    print some_value
+    return some_value
+{% endhighlight %}
+
+> ### <i class="fa fa-code fa-lg fa-left"></i>Earn some money!
+>
+> Sarah agrees to take out the garbage at her apartment complex each week. Some weeks, all of the trash cans are full, but other weeks only some of the cans needs to be taken out. The landlord agrees to pay her $7 per week plus $5 for each can that is taken out.
+>
+> Write a function to determine how much money Sarah earns in a week based on how many garbage cans she takes out.
+
+---
+
 *Based on the Codecademy Python course*
