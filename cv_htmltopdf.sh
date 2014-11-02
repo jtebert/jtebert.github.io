@@ -6,4 +6,5 @@ wkhtmltopdf \
     --footer-center [page] \
     --footer-font-name "Droid Sans" \
     --footer-font-size 10 \
-    http://juliaebert.com/cv/plain cv_plain.pdf
+    http://juliaebert.com/cv/plain \
+    cv_plain.pdf
