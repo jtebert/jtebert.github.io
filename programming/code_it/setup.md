@@ -31,4 +31,4 @@ If CodeBunk isn't working or don't want to or can't create an account, you can u
 
 ## Get Started
 
-#### [Continue to the lesson]({{ site.base_url }}/programming/code_it/week1/)
+#### [Continue to the lesson]({{ site.baseurl }}/programming/code_it/week1/)
