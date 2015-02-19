@@ -1,6 +1,11 @@
 html, body {
     background: #fff;
     color: #000;
+    //font-family: "Garamond", serif;
+}
+
+h1, h2 {
+    //font-family: "Garamond", serif;
 }
 
 table {
