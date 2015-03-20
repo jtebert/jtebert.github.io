@@ -243,7 +243,7 @@ figure {
 
 figure img {
     max-width: 16em;
-    max-height: 16em;
+    max-height: 20em;
 }
 
 figcaption {
@@ -323,7 +323,8 @@ figcaption {
 
 #footer {
     height: 4em;
-    width: 100%;
+    width: 60.01em;
+    margin:auto;
     padding-top: 1em;
     clear: both;
     position: relative;
