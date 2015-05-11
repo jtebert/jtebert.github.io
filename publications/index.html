@@ -7,7 +7,10 @@ title: Posters
 
 <p>For a complete list of posters and presentations, <a href="cv">see my CV.</a></p>
 
-{% for post in site.categories.publications %}
-    <div class="divider1"></div><div class="divider2"></div>
-    {{ post.content }}
-{% endfor %}
+<table class="listing">
+    <tbody>
+    {% for post in site.categories.publications %}
+        <tr>{{ post.content }}</tr>
+    {% endfor %}
+    </tbody>
+</table>
