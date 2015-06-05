@@ -1,5 +1,5 @@
 ---
-layout: code_it_page
+layout: code-it-page
 title: Setup
 permalink: /programming/code_it/setup/
 ---

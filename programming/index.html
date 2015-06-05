@@ -7,10 +7,9 @@ title: Programming
 
 <p>These are some of the independent programming projects on which I am currently working or that I have completed.  Many of my projects can be found on my <a href="https://github.com/jtebert">GitHub page.</a></p>
 
-<table class="listing">
-    <tbody>
-    {% for post in site.categories.programming %}
-        <tr>{{ post.content }}</tr>
-    {% endfor %}
-    </tbody>
-</table>
+{% for post in site.categories.programming %}
+<hr/>
+<div class="row">
+    {{ post.content }}
+</div>
+{% endfor %}

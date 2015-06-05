@@ -5,12 +5,11 @@ title: Posters
 
 <h1><i class="fa fa-file fa-rotate-90 fa-fw fa-lg fa-left"></i>{{ page.title }}</h1>
 
-<p>For a complete list of posters and presentations, <a href="cv">see my CV.</a></p>
+<p>For a complete list of posters and presentations, <a href="/cv">see my CV.</a></p>
 
-<table class="listing">
-    <tbody>
-    {% for post in site.categories.publications %}
-        <tr>{{ post.content }}</tr>
-    {% endfor %}
-    </tbody>
-</table>
+{% for post in site.categories.publications %}
+<hr/>
+<div class="row">
+    {{ post.content }}
+</div>
+{% endfor %}

@@ -1,0 +1,422 @@
+// Change font size as box sizes change
+
+@media (max-width: $screen-md) {
+  body{font-size: 16px;}
+}
+@media (max-width: $screen-md) {
+  body{font-size: 16px;}
+}
+@media (max-width: $screen-sm) {
+  body{font-size: 3.25vw;}
+
+  .in {
+    font-size: 2em;
+  }
+
+  .row .in .name {
+    font-size: 2em;
+  }
+
+}
+
+.outer-container {
+  padding-top: $grid-gutter-width / 2;
+}
+
+// Name in 2nd box
+.in .name {
+  font-variant: normal;
+  text-transform: none;
+  margin: 1.1em 0 0 0.4em;
+  font-weight: 200;
+  line-height: 1.1em;
+  font-size: 3.75em;
+
+  b {
+    font-weight: 300;
+  }
+}
+
+// Set Fonts
+
+// Section
+h1 {
+  font-variant: small-caps;
+  text-transform: uppercase;
+  font-family: "Roboto Slab";
+  font-weight: 300;
+  //font-size: 16;
+  font-size: 2em;
+  margin: 1em 0;
+}
+
+// Subsection
+h2 {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-family: "Raleway";
+  font-weight: 700;
+  //font-size: 11;
+  font-size: 1.5em;
+}
+
+// Descriptor
+h3 {
+  //font-variant: small-caps;
+  font-family: "Roboto Slab";
+  font-weight: 500;
+  //font-size: 11;
+  font-size: 1.4em;
+}
+
+// Location
+h4 {
+  font-family: "Raleway";
+  font-weight: 500;
+  //font-size: 10;
+  font-size: 1.2em;
+  color: #555;
+}
+
+h5 {
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+a {
+  //color: $background;
+  color: $darkBackground;
+  font-family: Raleway;
+  font-weight: 500;
+  text-decoration: underline;
+
+  &:hover, &:visited:hover {
+    color: $darkMainColor;
+    //text-decoration: none;
+  }
+
+  &:visited {
+    color: $darkBackground;
+  }
+}
+
+
+// Boxes
+
+// Make it a square
+.dummy {
+  padding-top: 100%;
+}
+
+.fill {
+  background-color: $mainColor;
+}
+
+.content {
+  background-color: $foreground;
+  color: $darkText;
+  padding: 1em 2em 1.5em 2em;
+
+  h3, h4 {
+    margin-bottom: .4em;
+    margin-top: .4em;
+  }
+
+  .row figure {
+    margin-bottom: 1em;
+  }
+
+  .row figcaption {
+    margin-top: 1em;
+  }
+
+  .row img {
+    width: 100%;
+  }
+}
+
+hr {
+  height: 2px;
+  border: 0;
+  background: $mainColor;
+  margin: 1.5em 0;
+  display: block;
+  clear: both;
+}
+
+img.in {
+  // TODO: Find some way to actually use $grid-gutter-width
+  width: calc(100% - 16px);
+}
+
+.in {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: $grid-gutter-width / 2;
+
+  a:hover {
+    color: $white;
+  }
+
+  // Titles in Boxes
+  h1 {
+    margin: 0;
+    margin-bottom: .25em;
+  }
+
+  h4 {
+    color: $white;
+  }
+}
+
+a .in {
+  text-decoration: none;
+  color: $white;
+}
+
+a:hover .in, a:visited:hover .in {
+  background-color: $darkMainColor;
+}
+
+.text-box {
+  padding: .8em;
+  line-height: 1.15em;
+}
+
+.logo-box {
+  padding: 1em;
+}
+
+// For spacing between boxes
+.box-vert-padding {
+  padding-top: $grid-gutter-width / 2;
+  padding-bottom: $grid-gutter-width / 2;
+}
+
+.content-vert-margin {
+  margin: $grid-gutter-width / 2 0;
+}
+
+.links {
+  list-style: none;
+  margin: 0 -0.8em;
+  padding: 0;
+
+  a {
+    display: block;
+    width: 100%;
+    padding: .6em 1em;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      background-color: $darkMainColor;
+      //text-decoration: none;
+    }
+  }
+}
+
+blockquote {
+  border-left-color: $mainColor;
+  background-color: $darkForeground;
+  font-size: 1em;
+  font-style: normal;
+  color: inherit;
+
+  p {
+    margin: .4em 0;
+  }
+
+  blockquote h3 {
+    margin-bottom: 1em;
+  }
+}
+
+pre {
+  border: none;
+  background-color: $darkForeground;
+  border-radius: 0;
+  font-size: 0.9em;
+}
+
+code {
+  //font-family: 'Droid Sans Mono', monospace;
+}
+
+
+// Navigation menu
+#nav {
+  padding: 0;
+  font-size: 1.15em;
+  list-style: none;
+  margin: 0;
+  font-weight: 500;
+
+  a {
+    display: block;
+    width: 100%;
+    padding: .25em .5em;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Roboto Slab';
+  }
+
+  a:hover {
+    background-color: $darkMainColor;
+    text-decoration: none;
+  }
+}
+
+.inline {
+  display: inline;
+  line-height: 1.5em;
+  margin: 0.5em 0.25em, 0.1em 0;
+}
+
+// CV Fonts
+.cv {
+  h2, h3, h4 {
+    display: inline;
+  }
+
+  h1, h4 {
+    color: #555;
+  }
+
+  // Subsection
+  h2 {
+    margin: 0.5em 0.25em 0.1em 0;
+  }
+
+  // Descriptor
+  h3 {
+    margin: 0.1em 0.25em 0.1em 0;
+  }
+
+  // Location
+  h4 {
+    line-height: 1.5em;
+    margin: 0.1em 0.25em 0.1em 0;
+  }
+
+  a.section, a.section:hover, a.section:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ul, p {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    font-family: "Raleway";
+  }
+
+  table {
+    margin: .25em 0 .5em 0;
+
+    td {
+      padding: .1em .25em;
+    }
+  }
+
+  hr.sep {
+    height: 1px;
+    border: 0;
+    background: none;
+    margin: 0.6em 0;
+    display: block;
+    clear: both;
+  }
+}
+
+// For small header fonts (CV, boxes)
+.in, .cv {
+  // Section
+  h1 {
+    font-size: 1.5em;
+  }
+
+  // Subsection
+  h2 {
+    margin-top: 0.8em;
+    font-size: 1.1em;
+  }
+
+  // Descriptor
+  h3 {
+    margin-top: 0.8em;
+    font-size: 1.1em;
+  }
+
+  // Location
+  h4 {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 0.95em;
+  }
+}
+
+// Font Awesome Spacing
+
+.fa {
+  margin: 0 .5em;
+}
+.fa-left {
+  margin-left: 0;
+}
+.fa-right {
+  margin-right: 0;
+}
+
+// Footer
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+
+// TODO: Make this look nicer on mobile size
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+
+  .row {
+    padding-top: 20px;
+  }
+
+  a, a:visited {
+    text-decoration: none;
+    color: $white;
+  }
+
+  a:hover, #footer a:visited:hover {
+    color: $mainColor;
+  }
+
+  .footer-contents {
+    text-align: center;
+
+    > div {
+      display: inline-block;
+    }
+  }
+
+  .footer-item {
+    display: inline-block;
+    margin: 0 1em;
+  }
+}

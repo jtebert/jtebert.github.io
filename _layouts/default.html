@@ -1,60 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8"/>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
-
-    <title>{{ site.name }}{% if page.title %}: {{ page.title }}{% endif %}</title>
-    <meta name="author" content="{{ site.name }}"/>
-    <meta name="description" content="{{ site.description }}">
-
-    <!--<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/my_style.css"/>-->
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css"/>
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/robotoslab_bold_macroman/stylesheet.css"/>
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/code_styles.css">
-
-    <script src="{{site.baseurl }}/static/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="{{site.baseurl }}/static/scripts.js"></script>
-</head>
+{% include head.html %}
 <body>
+<div class="container outer-container">
+    {% include top-row.html %}
 
-<div class="main-container">
-    <div class="row" id="row-1">
-        <div class="box" id=logo-box><a href="{{ site.baseurl }}/">
-            <div>
-                <img src="{{ site.baseurl }}/imgs/JTE.png"/>
-            </div>
-        </a></div><!--
-        --><div class="box">
-            <div>
-                <h1>Julia Ebert</h1>
-            </div>
-        </div>
-    </div>
-    <div class="level2-container">
-        <div class="box" id="menu-box">
-            <ul id="nav">
-                <li><a href="{{ site.baseurl }}/"><i class="fa fa-home fa-fw"></i>Home</a></li>
-                <li><a href="{{ site.baseurl }}/cv"><i class="fa fa-file-text fa-fw"></i>CV</a></li>
-                <li><a href="{{ site.baseurl }}/research"><i class="fa fa-bar-chart fa-fw"></i>Research</a></li>
-                <li><a href="{{ site.baseurl }}/publications"><i class="fa fa-file fa-rotate-90 fa-fw"></i>Posters</a></li>
-                <li><a href="{{ site.baseurl }}/programming"><i class="fa fa-code fa-fw"></i>Programming</a></li>
-                <li><a href="{{ site.baseurl }}/media"><i class="fa fa-youtube-play fa-fw"></i>Media</a></li>
-            </ul>
-        </div><!--
-        --><div class="content-container">{{content}}</div>
-    </div>
+    <!-- Menu + boxes OR text area -->
+    {{ content }}
 </div>
 
-<div id="footer">
-    <ul>
-        <li>&#169; 2015, designed by Julia Ebert</li>
-        <li><a href="{{ site.baseurl }}/"><i class="fa fa-home fa-lg"></i>Home</a></li>
-        <li><a href="mailto:julia@juliaebert.com"><i class="fa fa-envelope"></i>Contact</a></li>
-    </ul>
-</div>
+{% include footer.html %}
 
 {% include analytics.html %}
 </body>

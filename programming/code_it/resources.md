@@ -1,5 +1,5 @@
 ---
-layout: code_it_page
+layout: code-it-page
 title: What can I do now?
 permalink: /programming/code_it/resources/
 ---
@@ -10,7 +10,7 @@ We just got started on everything you can do with programming. Don't stop now! T
 
 ---
 
-## Check out useful resources
+# Check out useful resources
 
 #### [Codecademy](http://www.codecademy.com/)
 Codecademy has lessons and projects for many programming languages, including Python. We've covered the start of the Python exercises. Keep learning more Python or try a new language!
@@ -26,13 +26,13 @@ If you get stuck and Google isn't helping, check out StackOverflow. Searching he
 
 ---
 
-## Keep Coding!
+# Keep Coding!
 
-#### Try it at school
+### Try it at school
 Check if your school offers a programming or computer science course, or if there is a club to join.
 
-#### Make your own project
+### Make your own project
 You'll have more fun programming and learn more when you're working on a project you want to do. Codecademy has some ideas, but you can also take inspiration from existing apps, programs, games, or anything you think could be made cooler or easier with programming.
 
-#### projecteuler.net
+### projecteuler.net
 Project Euler has hundreds of cool problems to solve using programming. Put your skills to use and keep them fresh by solving interesting math problems.

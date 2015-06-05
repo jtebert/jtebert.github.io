@@ -1,5 +1,5 @@
 ---
-layout: code_it_page
+layout: code-it-page
 title: Week 1
 permalink: /programming/code_it/week1/
 ---

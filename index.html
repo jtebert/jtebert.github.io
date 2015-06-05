@@ -1,36 +1,48 @@
 ---
-layout: boxes
+layout: default
 ---
 
-<div class="row" id="row-2">
-    <div class="box">
-        <img src="imgs/marshall_2_square_small.jpg"/>
-    </div><!--
-    --><div class="box">
-    <div>
-        <h3>About</h3>
-        <p>I recently graduated from Northeastern University with a BS in Behavioral Neuroscience and minor in Computer Science. I have been part of the Action Lab for four years, where I study human motor learning.</p>
+<div class="row"> <!-- Row 2 -->
+    <div class="visible-xs hidden-sm visible-md visible-lg">
+        {% include menu.html %}
     </div>
-    </div><!--
-    --><div class="box">
-        <div>
-            <h3>Goals</h3>
+
+    <div class="col-sm-4 col-md-3 box-vert-padding">
+        <div class="dummy"></div>
+        <img class="in" src="/assets/imgs/media/marshall_2_square_small.jpg"/>
+    </div>
+    <div class="col-sm-4 col-md-3 box-vert-padding">
+        <div class="dummy"></div>
+        <div class="in fill text-box">
+            <h1>About</h1>
+            <p>I recently graduated from Northeastern University with a BS in Behavioral Neuroscience and minor in Computer Science. I have been part of the Action Lab for four years, where I study human motor learning.</p>
+        </div>
+    </div>
+    <div class="col-sm-4 col-md-3 box-vert-padding">
+        <div class="dummy"></div>
+        <div class="in fill text-box">
+            <h1>Goals</h1>
             <p>In the fall, I will begin a MRes in Bioengineering at Imperial College London as a Marshall Scholar. I plan to pursue a PhD in bioengineering and  continue my research in motor learning in an academic research career.</p>
         </div>
     </div>
 </div>
-<div class="row" id="row-3">
-    <div class="box"></div><!--
-    --><div class="box">
-        <div>
-            <h3>Interests</h3>
+
+<div class="row"> <!-- Row 3 -->
+    <div class="col-sm-4 col-md-3 col-md-offset-3 box-vert-padding">
+        <div class="dummy"></div>
+        <div class="in fill text-box">
+            <h1>Interests</h1>
             <p>I am interested in human motor learning, robotics, and the interface between the two, such as robotic prosthetics, biomimetic robotics, and artificial intelligence.</p>
         </div>
-    </div><!--
-    --><div class="box"><img src="imgs/Northeastern-seal-knockout.png"/></div><!--
-    --><div class="box">
-        <div>
-            <h3>Links</h3>
+    </div>
+    <div class="col-sm-4 col-md-3 box-vert-padding">
+        <div class="dummy"></div>
+        <img class="in" src="/assets/imgs/logos/Northeastern-seal-knockout.png"/>
+    </div>
+    <div class="col-sm-4 col-md-3 box-vert-padding">
+        <div class="dummy"></div>
+        <div class="in fill text-box">
+            <h1>Links</h1>
             <ul class="links">
                 <li><a href="https://github.com/jtebert"><i class="fa fa-github fa-fw fa-lg"></i>GitHub</a></li>
                 <li><a href="http://www.linkedin.com/in/ebertjulia/"><i class="fa fa-linkedin fa-fw fa-lg"></i>LinkedIn</a></li>
@@ -40,25 +52,33 @@ layout: boxes
         </div>
     </div>
 </div>
-<div class="row" id="row-4">
-    <div class="box"></div><!--
-    --><div class="box"><a href="http://www.northeastern.edu/news/2014/12/juliaebertmarshallscholarship/">
-        <div>
-            <h3>Article<i class="fa fa-external-link"></i></h3>
-            <p><b>Honors student wins Marshall Scholarship</b></p>
-            <p><i>Northeastern News</i></p>
-            <p>2014 December 5, by Jason Kornwitz</p>
-        </div>
-    </a></div><!--
-   --><div class="box">
-        <img src="imgs/goldwater_small.jpg"/>
-   </div><!--
-   --><div class="box"><a href="http://www.northeastern.edu/news/2013/04/honors-student-named-goldwater-scholar">
-        <div>
-            <h3>Article<i class="fa fa-external-link"></i></h3>
-            <p><b>Honors student named Goldwater Scholar</b></p>
-            <p><i>Northeastern News</i></p>
-            <p>2013 April 24, by Jordana Torres</p>
-        </div>
-    </a></div>
+
+<div class="row"> <!-- Row 4 -->
+    <div class="col-sm-4 col-md-3 col-md-offset-3 box-vert-padding">
+        <div class="dummy"></div>
+        <a href="http://www.northeastern.edu/news/2014/12/juliaebertmarshallscholarship/">
+            <div class="in fill text-box">
+                <h1>Article<i class="fa fa-external-link"></i></h1>
+                <h2>Honors student wins Marshall Scholarship</h2>
+                <h3>Northeastern News</h3>
+                <h4>Jason Kornwitz | 5 December 2014</h4>
+            </div>
+        </a>
+
+    </div>
+    <div class="col-sm-4 col-md-3 box-vert-padding">
+        <div class="dummy"></div>
+        <img class="in" src="/assets/imgs/media/goldwater_small.jpg"/>
+    </div>
+    <div class="col-sm-4 col-md-3 box-vert-padding">
+        <div class="dummy"></div>
+        <a href="http://www.northeastern.edu/news/2013/04/honors-student-named-goldwater-scholar">
+            <div class="in fill text-box small-h">
+                <h1>Article<i class="fa fa-external-link"></i></h1>
+                <h2>Honors student named Goldwater Scholar</h2>
+                <h3>Northeastern News</h3>
+                <h4>Jordana Torres | 24 April 2013</h4>
+            </div>
+        </a>
+    </div>
 </div>
