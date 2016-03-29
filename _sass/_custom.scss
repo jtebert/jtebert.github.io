@@ -325,13 +325,18 @@ code {
     margin-bottom: 0.25em;
     font-family: "Raleway";
   }
+  p {
+    margin-bottom: 1em;
+  }
 
   table {
     margin: .25em 0 .5em 0;
 
     td {
       padding: .1em .25em;
+      vertical-align: top;
     }
+    td:nth-child(1)  {white-space: nowrap;}
   }
 
   hr.sep {
