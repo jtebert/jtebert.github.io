@@ -428,21 +428,21 @@ body {
 @media (max-width: $screen-sm) {
   body{font-size: 4vw;}
 
-  .in {
-    font-size: 1.65em;
+  .in.logo-box {
+    padding: 16px;
   }
-
-  .row .in .name {
-    font-size: 1.85em;
+  .text-box {
+    font-size: 0.9em;
+    padding: 0.3em;
+  }
+  img.in {
+    padding: 0;
   }
 
   #nav {
-    font-size: 0.74em;
+    font-size: 1.2em;
     a {
       padding: .1em .2em;
-    }
-    .fa {
-      margin-left: 0;
     }
   }
 
