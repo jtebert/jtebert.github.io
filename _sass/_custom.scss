@@ -6,10 +6,10 @@
 .in .name {
   font-variant: normal;
   text-transform: none;
-  margin: 1.1em 0 0 0.4em;
+  margin: 66px 0 0 24px;
   font-weight: 200;
-  line-height: 1.1em;
-  font-size: 3.75em;
+  line-height: 66px;
+  font-size: 60px;
 
   b {
     font-weight: 300;
@@ -22,7 +22,7 @@
 h1 {
   font-variant: small-caps;
   text-transform: uppercase;
-  font-family: "Roboto Slab";
+  font-family: $title-font, sans-serif;
   font-weight: 300;
   font-size: 2em;
   margin: 1em 0;
@@ -46,46 +46,40 @@ h1 {
 h2 {
   margin-top: 0;
   text-transform: uppercase;
-  font-family: "Raleway";
+  font-family: $body-font, sans-serif;
   font-weight: 700;
-  //font-size: 11;
   font-size: 1.5em;
 }
 
 // Descriptor
 h3 {
-  //font-variant: small-caps;
-  font-family: "Roboto Slab";
+  font-family: $title-font, sans-serif;
   font-weight: 500;
-  //font-size: 11;
   font-size: 1.4em;
 }
 
 // Location
 h4 {
-  font-family: "Raleway";
+  font-family: $body-font, sans-serif;
   font-weight: 500;
-  //font-size: 10;
   font-size: 1.2em;
   color: #555;
 }
 
 h5 {
-  font-family: Raleway;
+  font-family: $body-font, sans-serif;
   font-weight: 500;
   font-size: 1.1em;
 }
 
 a {
-  //color: $background;
   color: $darkBackground;
-  font-family: Raleway;
+  font-family: $body-font, sans-serif;
   font-weight: 500;
   text-decoration: underline;
 
   &:hover, &:visited:hover {
     color: $darkMainColor;
-    //text-decoration: none;
   }
 
   &:visited {
@@ -108,7 +102,7 @@ a {
 .content {
   background-color: $foreground;
   color: $darkText;
-  padding: 1em 2em 1.5em 2em;
+  padding: 16px 32px 24px 32px;
 
   h3, h4 {
     margin-bottom: .4em;
@@ -116,11 +110,11 @@ a {
   }
 
   .row figure {
-    margin-bottom: 1em;
+    margin-bottom: 16px;
   }
 
   .row figcaption {
-    margin-top: 1em;
+    margin-top: 16px;
   }
 
   .row img {
@@ -132,7 +126,7 @@ hr {
   height: 2px;
   border: 0;
   background: $mainColor;
-  margin: 1.5em 0;
+  margin: 24px 0;
   display: block;
   clear: both;
 }
@@ -158,7 +152,7 @@ img.in {
   // Titles in Boxes
   h1 {
     margin: 0;
-    margin-bottom: .25em;
+    margin-bottom: 4px;
   }
 
   h4 {
@@ -176,12 +170,12 @@ a:hover .in, a:visited:hover .in {
 }
 
 .text-box {
-  padding: .8em;
+  padding: 12px;
   line-height: 1.15em;
 }
 
 .logo-box {
-  padding: 1em;
+  padding: 16px;
 }
 
 // For spacing between boxes
@@ -196,7 +190,7 @@ a:hover .in, a:visited:hover .in {
 
 .links {
   list-style: none;
-  margin: 0 -0.8em;
+  margin: 0 -12px;
   padding: 0;
 
   a {
@@ -252,10 +246,10 @@ code {
   a {
     display: block;
     width: 100%;
-    padding: .25em .5em;
+    padding: 4px 8px;
     text-decoration: none;
     color: inherit;
-    font-family: 'Roboto Slab', sans-serif;
+    font-family: $title-font, sans-serif;
   }
 
   a:hover {
@@ -267,7 +261,7 @@ code {
 .inline {
   display: inline;
   line-height: 1.5em;
-  margin: 0.5em 0.25em 0.1em 0;
+  margin: 8px 4px 2px 0;
 }
 
 // CV Fonts
@@ -282,18 +276,18 @@ code {
 
   // Subsection
   h2 {
-    margin: 0.5em 0.25em 0.1em 0;
+    margin: 8px 4px 2px 0;
   }
 
   // Descriptor
   h3 {
-    margin: 0.1em 0.25em 0.1em 0;
+    margin: 2px 4px 2px 0;
   }
 
   // Location
   h4 {
     line-height: 1.5em;
-    margin: 0.1em 0.25em 0.1em 0;
+    margin: 2px 4px 2px 0;
   }
 
   a.section, a.section:hover, a.section:visited {
@@ -302,19 +296,19 @@ code {
   }
 
   ul, p {
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
-    font-family: "Raleway", sans-serif;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-family: $body-font, sans-serif;
   }
   p {
     margin-bottom: 1em;
   }
 
   table {
-    margin: .25em 0 .5em 0;
+    margin: 4px 0 8px 0;
 
     td {
-      padding: .1em .25em;
+      padding: 2px 4px;
       vertical-align: top;
     }
     td:nth-child(1)  {white-space: nowrap;}
@@ -324,7 +318,7 @@ code {
     height: 1px;
     border: 0;
     background: none;
-    margin: 0.6em 0;
+    margin: 10px 0;
     display: block;
     clear: both;
   }
@@ -339,13 +333,13 @@ code {
 
   // Subsection
   h2 {
-    margin-top: 0.8em;
+    margin-top: 12px;
     font-size: 1.1em;
   }
 
   // Descriptor
   h3 {
-    margin-top: 0.8em;
+    margin-top: 12px;
     font-size: 1.1em;
   }
 
@@ -362,7 +356,7 @@ code {
 // Font Awesome Spacing
 
 .fa {
-  margin: 0 .5em;
+  margin: 0 8px;
 }
 .fa-left {
   margin-left: 0;
@@ -415,7 +409,7 @@ body {
 
   .footer-item {
     display: inline-block;
-    margin: 0 1em .5em 1em;
+    margin: 0 16px 8px 16px;
   }
 }
 
@@ -433,7 +427,7 @@ body {
   }
   .text-box {
     font-size: 0.9em;
-    padding: 0.3em;
+    padding: 8px;
   }
   img.in {
     padding: 0;
@@ -442,14 +436,11 @@ body {
   #nav {
     font-size: 1.2em;
     a {
-      padding: .1em .2em;
+      padding: 1px 4px;
     }
   }
 
-  .content {
-    padding: 0.5em 1em 0.75em 1em;
-  }
   .links {
-    margin: 0 -0.3em;
+    margin: 0 -8px;
   }
 }
