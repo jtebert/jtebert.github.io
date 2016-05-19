@@ -1,21 +1,3 @@
-// Change font size as box sizes change
-
-@media (max-width: $screen-md) {
-  body{font-size: 16px;}
-}
-@media (max-width: $screen-sm) {
-  body{font-size: 4vw;}
-
-  .in {
-    font-size: 1.65em;
-  }
-
-  .row .in .name {
-    font-size: 1.85em;
-  }
-
-}
-
 .outer-container {
   padding-top: $grid-gutter-width / 2;
 }
@@ -157,9 +139,8 @@ hr {
 
 img.in {
   // TODO: Find some way to actually use $grid-gutter-width
-  max-width: calc(100% - 16px);
-  max-height: calc(100% - 16px);
-  margin: auto;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
 }
 
 .in {
@@ -274,7 +255,7 @@ code {
     padding: .25em .5em;
     text-decoration: none;
     color: inherit;
-    font-family: 'Roboto Slab';
+    font-family: 'Roboto Slab', sans-serif;
   }
 
   a:hover {
@@ -286,7 +267,7 @@ code {
 .inline {
   display: inline;
   line-height: 1.5em;
-  margin: 0.5em 0.25em, 0.1em 0;
+  margin: 0.5em 0.25em 0.1em 0;
 }
 
 // CV Fonts
@@ -323,7 +304,7 @@ code {
   ul, p {
     margin-top: 0.25em;
     margin-bottom: 0.25em;
-    font-family: "Raleway";
+    font-family: "Raleway", sans-serif;
   }
   p {
     margin-bottom: 1em;
@@ -435,5 +416,37 @@ body {
   .footer-item {
     display: inline-block;
     margin: 0 1em .5em 1em;
+  }
+}
+
+
+// Change font size as box sizes change
+
+@media (max-width: $screen-md) {
+  body{font-size: 16px;}
+}
+@media (max-width: $screen-sm) {
+  body{font-size: 4vw;}
+
+  .in {
+    font-size: 1.65em;
+  }
+
+  .row .in .name {
+    font-size: 1.85em;
+  }
+
+  #nav {
+    font-size: 0.74em;
+    a {
+      padding: .1em .2em;
+    }
+    .fa {
+      margin-left: 0;
+    }
+  }
+
+  .content {
+    padding: 0.5em 1em 0.75em 1em;
   }
 }
