@@ -73,9 +73,9 @@ h5 {
 }
 
 a {
-  color: $darkBackground;
-  font-family: $body-font, sans-serif;
-  font-weight: 500;
+  color: $darkText;
+  //font-family: $body-font, sans-serif;
+  //font-weight: 500;
   text-decoration: underline;
 
   &:hover, &:visited:hover {
