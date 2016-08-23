@@ -197,9 +197,18 @@ a:hover .in, a:visited:hover .in {
   a {
     display: block;
     width: 100%;
-    padding: .6em 1em;
+    padding: .6em 1em .6em 2.6em;
     text-decoration: none;
     color: inherit;
+    position: relative;
+    vertical-align: middle;
+
+    i {
+      position: absolute;
+      left: 0;
+      //top: 50%;
+      //margin-top: -0.4em;
+    }
 
     &:hover {
       background-color: $darkMainColor;
