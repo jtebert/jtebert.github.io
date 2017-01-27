@@ -22,7 +22,8 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$brand-primary:         #1C3144;
+$brand-primary: #1A354C;
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
@@ -33,14 +34,31 @@ $brand-danger:          #d9534f !default;
 //
 //## Main colors of the theme
 
-$background: #2e3436;
+$background: $brand-primary;
 $darkBackground: #171a1b;
-$foreground: #ecf0f1;
-$darkForeground: #e2e8ea;
-$mainColor: #f57900;
-$darkMainColor: #e65100;
+$foreground: #fff;
+$darkForeground: #eeeeee;
+$mainColor: $brand-primary;
+$darkMainColor: $brand-primary;
+$accentColor: #B20032;
+$darkAccentColor: #7F0024;
 $white: #fff;
 $darkText: #333;
+$lightText: #ecf0f1;
+$primaryText: $darkText;
+$secondaryText: $lightText;
+
+
+//== Jekyll
+//
+//## Variables assigned by Jekyll
+$background-color: $brand-primary;
+$brand-color:      #ecf0f1;
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+$on-palm:          600px;
+$on-laptop:        800px;
 
 
 //== Scaffolding
@@ -50,7 +68,7 @@ $darkText: #333;
 //** Background color for `<body>`.
 $body-bg:               $background !default;
 //** Global text color on `<body>`.
-$text-color:            $white !default;
+$text-color:            $primaryText !default;
 
 //** Global textual link color.
 $link-color:            $brand-primary !default;
@@ -90,7 +108,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 $headings-font-family:    inherit !default;
 $headings-font-weight:    500 !default;
 $headings-line-height:    1.1 !default;
-$headings-color:          inherit !default;
+$headings-color:          $darkMainColor !default;
 
 
 //== Iconography

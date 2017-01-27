@@ -16,6 +16,15 @@
   }
 }
 
+#logo-box a {
+  #logo-dark { display: block; }
+  #logo-light { display: none; }
+}
+#logo-box a:hover {
+  #logo-dark { display: none; }
+  #logo-light { display: block; }
+}
+
 // Set Fonts
 
 // Section
@@ -34,11 +43,12 @@ h1 {
   padding-left: 2em;
   vertical-align: middle;
 
-  i {
+  i.fa {
     position: absolute;
     left: 0;
     top: 50%;
     margin-top: -0.4em; // half height of icon
+    color: $accentColor;
   }
 }
 
@@ -47,23 +57,23 @@ h2 {
   margin-top: 0;
   text-transform: uppercase;
   font-family: $body-font, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.5em;
 }
 
 // Descriptor
 h3 {
   font-family: $title-font, sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 1.4em;
 }
 
 // Location
 h4 {
   font-family: $body-font, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.2em;
-  color: #555;
+  // color: #555;
 }
 
 h5 {
@@ -73,17 +83,17 @@ h5 {
 }
 
 a {
-  color: $darkText;
+  color: $accentColor;
   //font-family: $body-font, sans-serif;
   //font-weight: 500;
   text-decoration: underline;
 
   &:hover, &:visited:hover {
-    color: $darkMainColor;
+    color: $mainColor;
   }
 
   &:visited {
-    color: $darkBackground;
+    color: $darkAccentColor;
   }
 }
 
@@ -96,7 +106,7 @@ a {
 }
 
 .fill {
-  background-color: $mainColor;
+  background-color: $foreground;
 }
 
 .content {
@@ -114,7 +124,8 @@ a {
   }
 
   .row figcaption {
-    margin-top: 16px;
+    margin-top: 8px;
+    color: $gray-light;
   }
 
   .row img {
@@ -125,7 +136,7 @@ a {
 hr {
   height: 2px;
   border: 0;
-  background: $mainColor;
+  background: $accentColor;
   margin: 24px 0;
   display: block;
   clear: both;
@@ -147,7 +158,7 @@ img.in {
   margin: $grid-gutter-width / 2;
 
   a:hover {
-    color: $white;
+    color: $secondaryText;
   }
 
   // Titles in Boxes
@@ -157,17 +168,21 @@ img.in {
   }
 
   h4 {
-    color: $white;
+    color: $primaryText;
   }
 }
 
 a .in {
   text-decoration: none;
-  color: $white;
+  color: $primaryText;
 }
 
 a:hover .in, a:visited:hover .in {
-  background-color: $darkMainColor;
+  background-color: $accentColor;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $secondaryText;
+  }
 }
 
 .text-box {
@@ -203,22 +218,26 @@ a:hover .in, a:visited:hover .in {
     position: relative;
     vertical-align: middle;
 
-    i {
+    i.fa {
       position: absolute;
       left: 0;
+      color: $accentColor;
       //top: 50%;
       //margin-top: -0.4em;
     }
 
     &:hover {
-      background-color: $darkMainColor;
+      background-color: $accentColor;
       //text-decoration: none;
+      i.fa {
+        color: $secondaryText;
+      }
     }
   }
 }
 
 blockquote {
-  border-left-color: $mainColor;
+  border-left-color: $accentColor;
   background-color: $darkForeground;
   font-size: 1em;
   font-style: normal;
@@ -260,11 +279,19 @@ code {
     text-decoration: none;
     color: inherit;
     font-family: $title-font, sans-serif;
+
+    i.fa {
+      color: $accentColor;
+    }
   }
 
   a:hover {
-    background-color: $darkMainColor;
+    background-color: $accentColor;
     text-decoration: none;
+    color: $secondaryText;
+    i.fa {
+      color: $secondaryText;
+    }
   }
 }
 
@@ -281,7 +308,7 @@ code {
   }
 
   h1, h4 {
-    color: #555;
+    //color: #555;
   }
 
   // Subsection
@@ -340,24 +367,26 @@ code {
   h1 {
     font-size: 1.5em;
   }
-
   // Subsection
   h2 {
     margin-top: 12px;
     font-size: 1.1em;
+    color: inherit;
   }
-
   // Descriptor
   h3 {
     margin-top: 12px;
-    font-size: 1.1em;
+    font-size: 1em;
+    color: inherit;
   }
-
   // Location
   h4 {
     font-size: 1em;
+    color: inherit;
   }
-
+  span.div {
+    margin: 0 8px;
+  }
   p {
     font-size: 0.95em;
   }
@@ -395,6 +424,7 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
+  color: $secondaryText;
 
   .row {
     padding-top: 20px;
@@ -402,11 +432,11 @@ body {
 
   a, a:visited {
     text-decoration: none;
-    color: $white;
+    color: $lightText;
   }
 
   a:hover, #footer a:visited:hover {
-    color: $mainColor;
+    color: $accentColor;
   }
 
   .footer-contents {
