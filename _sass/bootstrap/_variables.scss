@@ -8,7 +8,8 @@ $bootstrap-sass-asset-helper: false !default;
 //## Primary fonts used across the website
 
 $title-font:            "Roboto Slab";
-$body-font:             "Raleway";
+$body-font:             "Roboto Light";
+$body-font-bold:        "Roboto Medium";
 
 
 //== Colors
@@ -82,7 +83,7 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Raleway", sans-serif !default;
+$font-family-sans-serif:  "Roboto Light", sans-serif !default;
 $font-family-serif:       "Roboto Slab", serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
