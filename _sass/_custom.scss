@@ -50,6 +50,13 @@ h1 {
     margin-top: -0.4em; // half height of icon
     color: $accentColor;
   }
+  i.mdi {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -26px; // half height of icon
+    color: $accentColor;
+  }
 }
 
 // Subsection
@@ -218,7 +225,7 @@ a:hover .in, a:visited:hover .in {
     position: relative;
     vertical-align: middle;
 
-    i.fa {
+    i.fa, i.mdi {
       position: absolute;
       left: 0;
       color: $accentColor;
@@ -229,7 +236,7 @@ a:hover .in, a:visited:hover .in {
     &:hover {
       background-color: $accentColor;
       //text-decoration: none;
-      i.fa {
+      i.fa, i.mdi {
         color: $secondaryText;
       }
     }
@@ -280,7 +287,7 @@ code {
     color: inherit;
     font-family: $title-font, sans-serif;
 
-    i.fa {
+    i.fa, i.mdi {
       color: $accentColor;
     }
   }
@@ -289,7 +296,7 @@ code {
     background-color: $accentColor;
     text-decoration: none;
     color: $secondaryText;
-    i.fa {
+    i.fa, i.mdi {
       color: $secondaryText;
     }
   }
@@ -395,13 +402,13 @@ code {
 
 // Font Awesome Spacing
 
-.fa {
+.fa, .mdi {
   margin: 0 8px;
 }
-.fa-left {
+.fa-left, .mdi-left {
   margin-left: 0;
 }
-.fa-right {
+.fa-right, .mdi-right {
   margin-right: 0;
 }
 
