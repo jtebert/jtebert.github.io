@@ -98,13 +98,16 @@ title: Curriculum Vitae
 
     <h1 id="publications"><a class="section" href="#publications">Publications</a></h1>
 
-    <p>S. Bazzi, <b>J. T. Ebert</b>, N. Hogan, and D. Sternad. 2018. Stability and Predictability in Dynamically Complex Physical Interactions. In <i>Proc. of the 2018 IEEE International Conference on Robotics and Automation (ICRA 2018), Brisbane, Australia, May 21–25, 2018.</i>
-
-    <p><b>J. T. Ebert</b>, M. Gauci, and R. Nagpal. 2018. Multi-Feature Decision Making in Agent Collectives. In <i>Proc. of the 17th Conference on Autonomous Agents an Multiagent Systems (AAMAS 2018), Stockholm, Sweden, July 10–15, 2018,</i> IFAAMAS.
-    <i>AAMAS 2018</i>.
-
-    <!--<p><i>[ Submitted ]</i> &nbsp; I. Farkhatdinov, <b>J. Ebert</b>, G. van Oort, E. van Asseldonk, and E. Burdet,
-        "Experiments on Human Balancing Co-Control in Standing;" <i>Robotics and Autonomous Systems;</i> 2017.</p>-->
+    {% for post in site.categories.publications %}
+        {% if post.tags contains 'paper' %}
+            <p>
+                {% include paper-citation.html %}
+                {% if post.file %}
+                    <a href="{{ site_baseurl }}/assets/pdfs/{{post.file}}"><i class="mdi mdi-book mdi-left"></i></a>
+                {% endif %}
+            </p>
+        {% endif %}
+    {% endfor %}
 
     <p><i>[ In preparation ]</i> &nbsp; S. Park, <b>J. Ebert</b>, D. Sternad, "Asymmetric Learning in an Asymmetric Bimanual
         Task."</p>
@@ -114,49 +117,16 @@ title: Curriculum Vitae
 
     <h1 id="conferences-presentations"><a class="section" href="#conferences-presentations">Conference Abstracts and Posters</a></h1>
 
-    <p><b>J. Ebert</b>, C. Teeple, E. Steinhardt, and S. Ramanathan,
-        "Infotaxis in a Multi-agent Sensor Network."
-        Poster at: <i>DOE CSGF Program Review;</i> 24–27 July 2017; Washington, DC.</p>
-
-    <p>I. Farkhatdinov, <b>J. Ebert</b>, G. van Oort, E. van Asseldonk, and E. Burdet,
-        "Human Balance Augmentation with Lower Limb Exoskeleton Robot.
-        Extended abstract and poster at: <i>RehabWeek 2017 workshop: Towards a next generation of wearable robotic devices for human-oriented assistance and therapy;</i> 17 July 2017; London, UK.
-        <a href="{{site.baseurl }}/assets/pdfs/2016_eurohaptics.pdf"><i class="fa fa-file-pdf-o"></i></a></p>
-
-    <p><b>J. Ebert</b>, I. Farkhatdinov, G. van Oort, E. van Asseldonk, and E. Burdet,
-        "Preliminary Study on Assisting Balance Recovery with Lower Limb Exoskeleton."
-        Work in progress paper and poster at: <i>EuroHaptics 2016;</i> 4–7 July 2016; London, UK.</p>
-
-    <p>D. Sternad, A. Mukovskiy, <b>J. Ebert</b>, and T. Dijkstra,
-        "Dynamic Stability in the Control of Complex Objects."
-        Poster at: <i>Biomechanics and Neural Control of Movement 2016;</i> 12–17 June 2016; Mt. Sterling, OH.</p>
-
-    <p><b>J. Ebert</b>, S. Park, and D. Sternad,
-        "Asymmetric Learning in an Asymmetric Bimanual Task."
-        Poster at: <i>Society for the Neural Control of Movement 25th Annual Meeting;</i> 20–24 April 2015; Charleston, SC.
-        <a href="{{site.baseurl }}/assets/pdfs/2015_ncm.pdf"><i class="fa fa-file-pdf-o"></i></a></p>
-
-    <p><b>J. Ebert</b>, A. Mukovskiy, T. Dijkstra, and D. Sternad,
-        "Why You Don’t Spill Your Coffee."
-        Poster at:<i>Northeastern University Research, Innovation, and Scholarship Expo (RISE);</i> 9 April 2015; Boston, MA.</p>
-
-    <p><b>J. Ebert</b>, S. Kim, D. Sternad, and S. Schaal,
-        "Learning and exploration in a novel dimensionality-reduction task."
-        Poster at: <i>Society for the Neural Control of Movement 24th Annual Meeting;</i> 20–25 April 2014; Amsterdam, NL.
-        <a href="{{site.baseurl }}/assets/pdfs/2014_ncm.pdf"><i class="fa fa-file-pdf-o"></i></a></p>
-
-    <p><b>J. Ebert</b>, S. Park, and D. Sternad,
-        "Asymmetric Learning in an Asymmetric Bimanual Task."
-        Poster at: <i>Northeastern University Research, Innovation, and Scholarship Expo (RISE);</i> 10 April 2014; Boston, MA.</p>
-
-    <p><b>J. Ebert</b>, S. Park, and D. Sternad,
-        "Asymmetric Learning in an Asymmetric Bimanual Task."
-        Poster at: <i>Northeast Undergraduate Research and Development Symposium;</i> 2–3 March 2013; Biddeford, ME.</p>
-
-    <p><b>J. Ebert</b>, S. Park, L. Griffin, T. O’Neil-Pirozzi, and D. Sternad,
-        "Central Fatigue in Cognitive and Motor Performance."
-        Poster at: <i>Northeastern University Research, Innovation, and Scholarship Expo (RISE);</i> 29 March 2012; Boston, MA.
-        <a href="{{site.baseurl }}/assets/pdfs/2012_rise.pdf"><i class="fa fa-file-pdf-o"></i></a></p>
+    {% for post in site.categories.publications %}
+        {% if post.tags contains 'poster' %}
+            <p>
+                {% include paper-citation.html %}
+                {% if post.file %}
+                <a href="{{ site_baseurl }}/assets/pdfs/{{post.file}}"><i class="mdi mdi-file mdi-rotate-90"></i></a>
+                {% endif %}
+            </p>
+        {% endif %}
+    {% endfor %}
 
     <!----------------------------------------------------------------------------->
     <hr/>

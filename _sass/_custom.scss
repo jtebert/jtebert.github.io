@@ -344,10 +344,20 @@ code {
 
   a {
     color: inherit;
+    i.fa, i.mdi {
+      color: $accentColor;
+    }
+    &:hover, &:visited:hover {
+      color: $link-hover-color;
+    }
+
+    &:visited {
+      i.fa, i.mdi {
+        color: $darkAccentColor;
+      }
+    }
   }
-  a:hover {
-    color: $link-hover-color;
-  }
+
   h2, h3, h4 {
     display: inline;
     text-transform: none;
@@ -510,9 +520,15 @@ h3.large {
 
   a {
     display: inline-block;
+    i.fa, i.mdi {
+      color: $accentColor;
+    }
   }
 
-  i.fa, i.mdi {margin: 0;}
+  i.fa, i.mdi {
+    margin: 0;
+    color: $grey-color;
+  }
 
   span {
     display: inline-block;
