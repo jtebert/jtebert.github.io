@@ -29,7 +29,6 @@
 
 // Section
 h1 {
-  font-variant: small-caps;
   text-transform: uppercase;
   font-family: $title-font, sans-serif;
   font-weight: 300;
@@ -490,5 +489,36 @@ body {
 
   .links {
     margin: 0 -8px;
+  }
+}
+
+
+// Publications page
+
+h3.large {
+  font-size: 32px;
+  margin-top: 1em;
+}
+
+.download-link {
+  list-style: none;
+  margin-left: 0;
+
+  li {
+    margin-bottom: 1em;
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  i.fa, i.mdi {margin: 0;}
+
+  span {
+    display: inline-block;
+    margin-top:         calc((#{$base-line-height}) * -1em);
+    margin-top: -webkit-calc((#{$base-line-height}) * -1em);
+    margin-left:         calc((#{$base-line-height}) * 1em);
+    margin-left: -webkit-calc((#{$base-line-height}) * 1em);
   }
 }

@@ -1,15 +1,54 @@
 ---
 layout: page
-title: Posters
+title: Publications & Posters
+categories: [publications, posters]
 ---
 
-<h1><i class="mdi mdi-file mdi-rotate-90 mdi-48px mdi-left"></i>{{ page.title }}</h1>
+<h1><i class="mdi mdi-book mdi-48px mdi-left"></i>{{ page.title }}</h1>
+
+<hr/>
+
+{% for post in site.categories.publications %}
+    {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
+    {% if currentyear != year %}
+        {% unless forloop.first %}</ul>{% endunless %}
+        <h3 class="large">{{ currentyear }}</h3>
+        <ul class="download-link">
+            {% capture year %}{{currentyear}}{% endcapture %}
+    {% endif %}
+    <li>
+        {% if post.file %}
+            <a href="{{ site_baseurl }}/assets/pdfs/{{post.file}}">
+        {% endif %}
+        <i class=
+           {% if post.tags contains 'paper' %}
+                "mdi mdi-book mdi-left"
+            {% elsif post.tags contains 'poster' %}
+                "mdi mdi-file mdi-rotate-90"
+            {% endif %}
+        ></i>
+        {% if post.file %}
+            </a>
+        {% endif %}
+        <span>
+            {{ post.authors }}.
+            {{ currentyear }}.
+            {{ post.title }}.
+            {{ post.in }}{% if post.extra %},
+            {{ post.extra }}{% endif %}.
+        </span>
+    </li>
+{% endfor %}
+</ul>
+
+<!--<h1><i class="mdi mdi-book mdi-48px mdi-left"></i>{{ page.title }}</h1>
 
 <p>For a complete list of posters and presentations, <a href="/cv">see my CV.</a></p>
 
-{% for post in site.categories.publications %}
+{% for post in site.categories.posters %}
 <hr/>
 <div class="row">
     {{ post.content }}
 </div>
 {% endfor %}
+-->
