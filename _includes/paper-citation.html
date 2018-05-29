@@ -1,6 +1,6 @@
 <span>
     {{ post.authors }}.
-    {{ currentyear }}.
+    {{post.date | date: "%Y"}}.
     {{ post.title }}.
     {{ post.in }}{% if post.extra %},
     {{ post.extra }}{% endif %}.
