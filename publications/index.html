@@ -6,43 +6,125 @@ categories: [publications, posters]
 
 <h1><i class="mdi mdi-book mdi-48px mdi-left"></i>{{ page.title }}</h1>
 
+<p>
+    <b>Filter:</b>&ensp;
+    <a id='pub-filter-all' href="javascript:showPubs('all')" class="active-filter">All</a>&ensp;
+    <a id='pub-filter-posters' href="javascript:showPubs('posters')">Posters</a>&ensp;
+    <a id='pub-filter-papers' href="javascript:showPubs('papers')">Papers</a>
+</p>
+
 <hr/>
 
-{% for post in site.categories.publications %}
-    {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
-    {% if currentyear != year %}
-        {% unless forloop.first %}</ul>{% endunless %}
-        <h3 class="large">{{ currentyear }}</h3>
-        <ul class="download-link">
-            {% capture year %}{{currentyear}}{% endcapture %}
-    {% endif %}
-    <li>
-        {% if post.file %}
-            <a href="{{ site_baseurl }}/assets/pdfs/{{post.file}}">
+<script>
+    function showPubs(type) {
+        var pubTypes = ['all', 'posters', 'papers']
+        var index = pubTypes.indexOf(type);
+        // Remove current publication type from list of publication types
+        if (index > -1) {
+            pubTypes.splice(index, 1);
+        }
+        // Hide the other items
+        var t;
+        for (var i in pubTypes) {
+            t = pubTypes[i]
+            document.getElementById('publications-'+t).style.display = "none";
+        }
+        // Display the current item
+        document.getElementById('publications-'+type).style.display = 'block'
+
+        // Set the other links as inactive
+        for (var i in pubTypes) {
+            t = pubTypes[i]
+            document.getElementById('pub-filter-'+t).classList.remove("active-filter");
+        }
+        // Set the current link as active
+        document.getElementById('pub-filter-'+type).classList.add("active-filter");
+    }
+</script>
+
+<!-- FILTER: ALL -->
+<div id="publications-all">
+    {% for post in site.categories.publications %}
+        {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
+        {% if currentyear != year %}
+            {% unless forloop.first %}</ul>{% endunless %}
+            <h3 class="large">{{ currentyear }}</h3>
+            <ul class="download-link">
+                {% capture year %}{{currentyear}}{% endcapture %}
         {% endif %}
-        <i class=
-           {% if post.tags contains 'paper' %}
-                "mdi mdi-book mdi-left"
-            {% elsif post.tags contains 'poster' %}
-                "mdi mdi-file mdi-rotate-90"
+        <li>
+            {% if post.file %}
+                <a href="{{ site_baseurl }}/assets/pdfs/{{post.file}}">
             {% endif %}
-        ></i>
-        {% if post.file %}
-            </a>
-        {% endif %}
-        {% include paper-citation.html %}
-    </li>
-{% endfor %}
-</ul>
-
-<!--<h1><i class="mdi mdi-book mdi-48px mdi-left"></i>{{ page.title }}</h1>
-
-<p>For a complete list of posters and presentations, <a href="/cv">see my CV.</a></p>
-
-{% for post in site.categories.posters %}
-<hr/>
-<div class="row">
-    {{ post.content }}
+            <i class=
+            {% if post.tags contains 'paper' %}
+                    "mdi mdi-book mdi-left"
+                {% elsif post.tags contains 'poster' %}
+                    "mdi mdi-file mdi-rotate-90"
+                {% endif %}
+            ></i>
+            {% if post.file %}
+                </a>
+            {% endif %}
+            {% include paper-citation.html %}
+        </li>
+    {% endfor %}
+    </ul>
 </div>
-{% endfor %}
--->
+
+<!-- FILTER: POSTERS -->
+<div id="publications-posters" style="display: none">
+    {% for post in site.categories.publications %}
+        {% assign currentdate = post.date | date: "%Y" %}
+        {% if currentdate != date %}
+            {% unless forloop.first %}</ul>{% endunless %}
+            {% if post.tags contains 'poster' %}
+                <h3 class="large">{{ currentdate }}</h3>
+                {% assign date = currentdate %}
+            {% endif %}
+            <ul class="download-link">
+        {% endif %}
+        {% if post.tags contains 'poster' %}
+            <li>
+                {% if post.file %}
+                    <a href="{{ site_baseurl }}/assets/pdfs/{{post.file}}">
+                {% endif %}
+                <i class="mdi mdi-file mdi-rotate-90"></i>
+                {% if post.file %}
+                    </a>
+                {% endif %}
+                {% include paper-citation.html %}
+            </li>
+        {% endif %}
+        {% if forloop.last %}</ul>{% endif %}
+    {% endfor %}
+</div>
+
+
+<!-- FILTER: PAPERS -->
+<div id="publications-papers" style="display: none">
+    {% for post in site.categories.publications %}
+        {% assign currentdate = post.date | date: "%Y" %}
+        {% if currentdate != date %}
+            {% unless forloop.first %}</ul>{% endunless %}
+            {% if post.tags contains 'paper' %}
+                <h3 class="large">{{ currentdate }}</h3>
+                {% assign date = currentdate %}
+            {% endif %}
+            <ul class="download-link">
+        {% endif %}
+        {% if post.tags contains 'paper' %}
+            <li>
+                {% if post.file %}
+                    <a href="{{ site_baseurl }}/assets/pdfs/{{post.file}}">
+                {% endif %}
+                <i class="mdi mdi-book mdi-left"></i>
+                {% if post.file %}
+                    </a>
+                {% endif %}
+                {% include paper-citation.html %}
+            </li>
+        {% endif %}
+        {% if forloop.last %}</ul>{% endif %}
+    {% endfor %}
+</div>
